@@ -1,0 +1,42 @@
+﻿> python scripts/us1_smiles_naar_molmassa.py
+
+=== aspirine ===
+  Invoer (SMILES)    : CC(=O)Oc1ccccc1C(=O)O
+  Canonieke SMILES   : CC(=O)Oc1ccccc1C(=O)O
+  Molecuulformule    : C9H8O4
+  Molmassa           : 180.16 g/mol
+  Exacte massa       : 180.0423 Da
+  Zware atomen       : 13
+  Controle (PubChem) : 180.16 g/mol -> OK (verschil 0.001)
+
+=== cafeïne ===
+  Invoer (SMILES)    : CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+  Canonieke SMILES   : Cn1c(=O)c2c(ncn2C)n(C)c1=O
+  Molecuulformule    : C8H10N4O2
+  Molmassa           : 194.19 g/mol
+  Exacte massa       : 194.0804 Da
+  Zware atomen       : 14
+  Controle (PubChem) : 194.19 g/mol -> OK (verschil 0.004)
+
+=== ethanol ===
+  Invoer (SMILES)    : CCO
+  Canonieke SMILES   : CCO
+  Molecuulformule    : C2H6O
+  Molmassa           : 46.07 g/mol
+  Exacte massa       : 46.0419 Da
+  Zware atomen       : 3
+  Controle (PubChem) : 46.07 g/mol -> OK (verschil 0.001)
+
+> python scripts/us1_smiles_naar_molmassa.py "C1CC(" "XYZ"
+
+=== Invoer 1 ===
+  FOUT: 'C1CC(' is geen geldige SMILES-string. Controleer haakjes, ringnummers en atoomsymbolen (bijv. 'Cl' in plaats van 'CL').
+
+=== Invoer 2 ===
+  FOUT: 'XYZ' is geen geldige SMILES-string. Controleer haakjes, ringnummers en atoomsymbolen (bijv. 'Cl' in plaats van 'CL').
+
+> python -m unittest discover tests
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 0.009s
+OK

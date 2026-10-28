@@ -1,0 +1,9 @@
+# Streamlit-instellingen voor de Molecuul-uitlegger.
+# https://docs.streamlit.io/develop/api-reference/configuration/config.toml
+
+[client]
+# "minimal": geen Deploy-knop en geen ontwikkelaarsopties in het menu rechtsboven.
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
